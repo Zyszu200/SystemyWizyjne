@@ -231,5 +231,37 @@ namespace StrukturaObrazuSr8
             pictureBox4.Image = image_line2.Bitmap;
         }
 
+        private void checkBox_Hex_CheckedChanged(object sender, EventArgs e)
+        {
+            if(!checkBox_Hex.Checked)
+            {
+                textBox_B.Text = Convert.ToInt32(textBox_B.Text, 16).ToString();
+                textBox_G.Text = Convert.ToInt32(textBox_G.Text, 16).ToString();
+                textBox_R.Text = Convert.ToInt32(textBox_R.Text, 16).ToString();
+
+                return;
+            }
+
+            textBox_B.Text = "0x" + Convert.ToInt32(textBox_B.Text).ToString("X");
+            textBox_G.Text = "0x" + Convert.ToInt32(textBox_G.Text).ToString("X");
+            textBox_R.Text = "0x" + Convert.ToInt32(textBox_R.Text).ToString("X");
+
+        }
+
+        private void checkBox2_Hex_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!checkBox2_Hex.Checked)
+            {
+                textBox2_B.Text = Convert.ToInt32(textBox2_B.Text, 16).ToString();
+                textBox2_G.Text = Convert.ToInt32(textBox2_G.Text, 16).ToString();
+                textBox2_R.Text = Convert.ToInt32(textBox2_R.Text, 16).ToString();
+
+                return;
+            }
+
+            textBox2_B.Text = "0x" + Convert.ToInt32(textBox2_B.Text).ToString("X");
+            textBox2_G.Text = "0x" + Convert.ToInt32(textBox2_G.Text).ToString("X");
+            textBox2_R.Text = "0x" + Convert.ToInt32(textBox2_R.Text).ToString("X");
+        }
     }
 }
